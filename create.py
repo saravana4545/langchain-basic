@@ -11,7 +11,7 @@ st.title("Simple Chat Bot")
 input_text = st.text_input("Enter your query:")
 
 prompt = ChatPromptTemplate.from_messages([
-    ("system", "You are a helpful AI assistant. Your name is Sandal's Assistant."),
+    ("system", "You are a helpful AI assistant. Your name is AI chatbot."),
     ("user", "User query: {query}")
 ])
 

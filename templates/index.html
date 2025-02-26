@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+</head>
+<body>
+    <h2>AI Chatbot</h2>
+    <form action="/chat" method="post">
+        <input type="text" name="message" id="message" placeholder="Type your message..." required>
+        <button type="submit">Send</button>
+    </form>
+    <form action="/history" method="get">
+        <input type="text" name="message" id="message" placeholder="Here get your message..." required>
+        <button type="submit">Find</button>
+    </form>
+    
+    {% if user_message and bot_response %}
+        <p><strong>You:</strong> {{ user_message }}</p>
+        <p><strong>Bot:</strong> {{ bot_response }}</p>
+    {% endif %}
+</body>
+</html>
