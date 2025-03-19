@@ -66,10 +66,10 @@ def chat():
     return render_template("index.html", user_message=user_input, bot_response=bot_reply)
 
 
-@app.route("/history", methods=["GET"])
-def get_chat_history():
-    chats = list(collection.find({}, {"_id": 0}))
-    return render_template('index.html',chats=chats)
+# @app.route("/history", methods=["GET"])
+# def get_chat_history():
+#     chats = list(collection.find({}, {"_id": 0}))
+#     return render_template('index.html',chats=chats)
 
 if __name__ == "__main__":
     app.run(debug=True)
